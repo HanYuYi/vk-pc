@@ -1,0 +1,214 @@
+.vbmarket_address_dialog {
+  width: 742px;
+  border: 1px solid #07eae7;
+  background-image: linear-gradient(to bottom, #17191f, #17191f), linear-gradient(to top, #07f1b7, #07e9f1);
+
+  .dialog_title {
+    font-size: 14px;
+  }
+
+  .el-dialog__body {
+    padding: 53px 20px;
+  }
+
+  .goods-address-form {
+    margin: auto;
+    width: 338px;
+    &.account-address-form {
+      width: 400px;
+      margin-left: 80px;
+    }
+
+    .el-form-item {
+      margin-bottom: 22px;
+      &.el-item-username {
+        margin-bottom: 48px;
+        .user-tip {
+          font-size: 12px;
+          color:#7c839f;
+          position: absolute;
+          left: 0;
+          top: 44px;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .el-textarea__inner {
+        font-family: Roboto;
+        background: transparent;
+        color: #fefefe;
+        font-size: 16px;
+        border: 1px solid #545f75;
+        border-radius: 17px;
+      }
+      .confirm-address-btn {
+        width: 120px;
+        background-image: linear-gradient(to right, #07e9f1, #07f1b7);
+        color: #000;
+        border-radius: 16px;
+        line-height: 32px;
+        &:hover {
+          background-image: linear-gradient(to left, #07e9f1, #07f1b7);
+          color: #fff;
+        }
+      }
+      .el-form-item__label {
+        font-size: 18px;
+        color: #fff;
+        line-height: 32px;
+        padding-right: 20px;
+      }
+
+      .el-form-item__content {
+        line-height: 32px;
+      }
+
+      .el-input-group__prepend {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-width: 1px;
+        border-right: none;
+        position: relative;
+
+        .input_prepend_select {
+          line-height: 32px;
+          color: #fff;
+
+          &::after {
+            content: "";
+            top: 5px;
+            right: 7px;
+            position: absolute;
+            width: 1px;
+            height: 22px;
+            background-color: #8792a9;
+          }
+        }
+      }
+      .el-icon-arrow-down {
+        display: inline-flex;
+        transform-origin: 50% 30%;
+        width: 15px;
+        height: 8px;
+        background: url("~@/assets/icon_es.png");
+        background-position: -798px -95px;
+        &::before,
+        &::after {
+          content: "";
+        }
+      }
+      .el-input .el-input__inner {
+        height: 34px;
+        line-height: 34px;
+        border-radius: 16px;
+        border-width: 1px;
+      }
+      .el-cascader {
+        line-height: 34px;
+        .el-cascader__label {
+          color: #07f1b7;
+          span {
+            color: #07f1b7;
+          }
+        }
+      }
+      .el-input__icon {
+        line-height: 34px;
+      }
+      .el-icon-circle-close {
+        margin-top: 7.5px;
+      }
+      .el-form-item__error {
+        top: 100% !important;
+      }
+    }
+
+    .input-phone {
+      .el-input .el-input__inner {
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  .confirm-goods-form {
+    margin: auto;
+    max-width: 500px;
+    font-size: 18px;
+    color: #fff;
+    .line {
+      margin-bottom: 20px;
+      display: flex;
+      span {
+        display: block;
+        line-height: 24px;
+      }
+      .desc {
+        max-width: 390px;
+      }
+    }
+    .label {
+      font-size: 14px;
+      width: 94px;
+      text-align: right;
+      color: #7c839f;
+      margin-right: 16px;
+    }
+    .bottom-btn-group {
+      margin-top: 59px;
+      .btn-normal {
+        position: relative;
+        cursor: pointer;
+        border-radius: 16px;
+        width: 100px;
+        height: 30px;
+        border: 1px solid #7c839f;
+        line-height: 32px;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        &:hover {
+          color: #07f1b7;
+          border: 1px solid #07f1b7;
+        }
+        &.forgoods-bt {
+          margin-left: 58px;
+        }
+      }
+    }
+  }
+}
+
+.region-cascader {
+  padding: 0;
+  .el-cascader-menu {
+    color: #7c839f;
+    background-color: transparent;
+    min-width: 100px;
+    height: 180px;
+    span {
+      color: #7c839f;
+    }
+    .el-cascader-menu__item:focus:not(:active),
+    .el-cascader-menu__item:hover {
+      background-color: #262932;
+      color: #07f1b7;
+    }
+    .el-cascader-menu__item.is-active {
+      background-color: #262932;
+      color: #07f1b7;
+    }
+    .el-cascader-menu__item--extensible:after {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url("~@/assets/icon_es.png") no-repeat;
+      background-position: -645px -44px;
+      font-size: 12px;
+      top: 11px;
+      content: '';
+    }
+  }
+}

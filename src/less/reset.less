@@ -1,0 +1,121 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  -webkit-text-size-adjust: none;
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow-y: scroll;
+  color: #7c839f;
+  font-size: 12px;
+  background-color: #17191f;
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 1240px;
+  outline: none;
+  // overflow: scroll;
+  /*  overflow: scroll;*/
+}
+body.page {
+  min-width: auto;
+}
+
+
+@font-face {
+  font-family: vkFont;
+  src: url("../assets/font/vkfont.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/font/Roboto-Regular-14.ttf");
+}
+@font-face {
+  font-family: YouSheBiaoTiHei;
+  src: url("../assets/font/YouSheBiaoTiHei.ttf");
+}
+*:focus {
+  outline: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  text-decoration: none;
+}
+em,
+i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+textarea {
+  outline: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  word-wrap: break-word;
+}
+a,
+input,
+button {
+  outline: none;
+}
+::-moz-focus-inner {
+  border: 0px;
+}
+/** 文本输入框的 X  **/
+input::-ms-clear{display: none;}
+/** 密码输入框的 X  **/
+input::-ms-reveal{display: none;}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+video {
+  object-fit: fill;
+}
+.el-scrollbar__wrap {
+  overflow-x: auto;
+}

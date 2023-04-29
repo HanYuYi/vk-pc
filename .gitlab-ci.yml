@@ -1,0 +1,23 @@
+stages:
+  - build
+
+build-test-job:
+  stage: build
+  tags:
+    - vk-view-ci
+  only:
+    - test
+  script:
+    - npm run build:test
+    - /bin/cp -rf dist/* /data/app/vkgame/public/
+
+build-develop-job:
+  stage: build
+  tags:
+    - vk-view-ci
+  only:
+    - develop
+  script:
+    - npm run build
+    - rm -rf dist/vkpc.zip
+    - /bin/cp -rf dist/* /data/app/cn_vkgame_for_master/public/

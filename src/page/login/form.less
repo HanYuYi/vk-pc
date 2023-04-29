@@ -1,0 +1,326 @@
+.el-form-item {
+  &.is-validating {
+    .el-form-item__content {
+      .el-input {
+        //&:focus-within {
+        //  .el-input-group__prepend {
+        //    border-color: #07f1b7!important;
+        //  }
+        //}
+        //.el-input__inner {
+        //  &:focus {
+        //    border-color: #07f1b7!important;
+        //    & ~ .el-input-group__append {
+        //      border-color: #07f1b7!important;
+        //    }
+        //  }
+        //}
+      }
+    }
+  }
+  &.is-success {
+    .el-form-item__content {
+      .el-input__inner {
+        border-color: #07f1b7;
+        //&:focus {
+        //  border-color: #07f1b7;
+        //}
+      }
+      .el-input-group__append, .el-input-group__prepend {
+        border-color: #07f1b7;
+      }
+    }
+  }
+  &.is-error {
+    .el-form-item__content {
+      .el-input__inner {
+        border-color: #f14667;
+      }
+      .el-form-item__error {
+        top: calc(48px + 3px);
+        color: #f14667;
+        font-size: 14px;
+      }
+      .el-input-group__append, .el-input-group__prepend {
+        border-color: #f14667;
+      }
+    }
+  }
+
+  &.input_prepend_select_parent {
+    .el-form-item__content {
+      .el-input {
+        .el-input-group__prepend {
+          width: 90px;
+          padding: 0 0 0 15px;
+          margin-right: 10px;
+          position: relative;
+          .input_prepend_select {
+            line-height: 44px;
+            &:after {
+              content: "";
+              top: 14.5px;
+              right: 10px;
+              position: absolute;
+              width: 1px;
+              height: 15px;
+              background-color: #8792a9;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.pass_view {
+  position: absolute;
+  display: inline-block;
+  right: 15px;
+  cursor: pointer;
+}
+.el-input {
+  &:focus-within {
+    .el-input-group__prepend {
+      border-color: #07f1b7!important;
+    }
+  }
+  .el-input__inner {
+    font-family: Roboto;
+    &:focus {
+      border-color: #07f1b7!important;
+      & ~ .el-input-group__append {
+        border-color: #07f1b7!important;
+      }
+    }
+    transition: border-color 0s cubic-bezier(.645,.045,.355,1);
+    background-color: transparent;
+    height: 48px;
+    border-radius: 6px;
+    line-height: 48px;
+    border: 2px solid #545f75;
+    font-size: 16px;
+    color: #fefefe;
+    &::-webkit-input-placeholder {
+      color: #8e9ab2;
+      font-size: 14px;
+      text-align: left;
+    }
+    &::-moz-placeholder {
+      color: #8e9ab2;
+      font-size: 14px;
+      text-align: left;
+    }
+    &::-ms-input-placeholder {
+      color: #8e9ab2;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+  .el-input__clear,.el-cascader__clearIcon {
+    display: inline-block;
+    transition: all 0s;
+    &::before, &::after {
+      content: "";
+    }
+    &.el-icon-circle-close {
+      width: 18px;
+      height: 19px;
+      background: url("../../assets/login/input_clear.png");
+      margin-top: 14px;
+      &:hover {
+        background: url("../../assets/login/input_clear_hover.png");
+      }
+    }
+
+  }
+  &.hide, &.show {
+    .el-input__suffix {
+      right: 38px;
+    }
+  }
+  &.hide {
+    & ~ .pass_view {
+      background: url("../../assets/login/password_close.png");
+      width: 27px;
+      height: 19px;
+      top: 14px;
+      &:hover {
+        background: url("../../assets/login/password_close_hover.png");
+      }
+    }
+  }
+  &.show {
+    & ~ .pass_view {
+      width: 28px;
+      height: 17px;
+      background: url("../../assets/login/password_view.png");
+      top: 16px;
+      &:hover {
+        background: url("../../assets/login/password_view_hover.png");
+      }
+    }
+  }
+}
+.el-input-group__append, .el-input-group__prepend {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0 15px;
+  border: 2px solid #545f75;
+}
+.el-input-group__prepend {
+  border-right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.el-input-group__append {
+  border-left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.el-input-group--prepend {
+  .el-input__inner {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+    padding: 0;
+    padding-right: 15px;
+  }
+}
+.el-input-group--append {
+  .el-input__inner {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    padding: 0;
+    padding-left: 15px;
+  }
+}
+
+.el-input--suffix {
+  .el-input__inner {
+    padding-right: 35px;
+  }
+  .el-input__suffix {
+    padding-right: 10px;
+    transition: all 0s;
+  }
+}
+
+//input 自定义图标
+.input_cus_icon_username {
+  margin-top: 3px;
+  display: inline-block;
+  width: 18px;
+  height: 23px;
+  background: url("../../assets/login/input_cus_icon_username.png") no-repeat;
+}
+.input_cus_icon_password {
+  margin-top: 3px;
+  display: inline-block;
+  width: 18px;
+  height: 23px;
+  background: url("../../assets/login/input_cus_icon_password.png") no-repeat;
+}
+.input_cus_icon_phone {
+  display: inline-block;
+  width: 18px;
+  height: 21px;
+  background: url("../../assets/login/input_cus_icon_phone.png") no-repeat;
+  vertical-align: text-bottom;
+}
+.select_caret {
+  display: inline-block;
+  width: 8px;
+  height: 6px;
+  background-image: url("../../assets/login/input_prepend_select.png");
+  vertical-align: middle;
+  transition: transform 0.2s;
+  &.open {
+    transform: rotate(180deg);
+  }
+}
+.input_cus_icon_invitation {
+  margin-top: 3px;
+  display: inline-block;
+  width: 22px;
+  height: 20px;
+  background: url("../../assets/login/input_cus_icon_invitation.png") no-repeat;
+}
+.input_cus_icon_answer {
+  margin-top: 3px;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url("../../assets/login/input_cus_icon_answer.png") no-repeat;
+}
+
+//重写 iView checkbox 样式
+.login_type_checkbox {
+  font-size: 14px;
+  line-height: 14px;
+  color: #8e9ab2;
+  &:hover {
+    .ivu-checkbox {
+      .ivu-checkbox-inner {
+        border-color: #6c7a95;
+      }
+    }
+  }
+  .ivu-checkbox {
+    .ivu-checkbox-inner {
+      border: solid 2px #545f75;
+      background-color: #222431;
+      box-sizing: border-box;
+      margin-right: 1px;
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+    }
+  }
+  &.ivu-checkbox-wrapper-checked {
+    .ivu-checkbox {
+      .ivu-checkbox-inner {
+        border: 0;
+        background-color: #07f1b7;
+        &:after {
+          margin-top: 3px;
+          margin-left: 1.5px;
+          width: 11px;
+          height: 8px;
+          background: url("../../assets/login/login_type_checkbox.png");
+        }
+      }
+    }
+  }
+}
+
+// 短信验证码
+.info_validate_box {
+  .input_ver {
+    .el-input__suffix {
+      padding-right: 0;
+    }
+    .el-input-group__prepend {
+      .txt-ver-icon {
+        margin-top: 4px;
+        display: inline-block;
+        width: 19px;
+        height: 23px;
+        background: url("../../assets/login/info_validate_icon.png") no-repeat top center;
+      }
+    }
+
+    .el-input-group__append {
+      padding: 0 15px 0 0;
+
+      .button_primary_2022 {
+        width: 90px;
+      }
+    }
+
+    .el-input__inner {
+      padding: 0;
+    }
+  }
+}
+
